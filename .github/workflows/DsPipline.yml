@@ -1,4 +1,4 @@
-name: DSPipeline
+name: dspipeline
 
 on:
   push:
@@ -23,6 +23,6 @@ jobs:
         run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
       
       - name: Push Docker image to GitHub Container Registry
-        run: docker push ghcr.io/${{ github.repository_owner }}/Calculatorapp
+        run: docker push ghcr.io/${{ github.repository_owner }}/calculatorapp
 
 
